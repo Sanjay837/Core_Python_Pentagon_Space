@@ -97,3 +97,28 @@ fun1()
 fun2()
 
 #access and modify global variable
+q=50 #gloobal variable
+def fun():
+    print(q)  #access the global variable
+fun()
+def fun1():
+    global q  # access the global variable using global keyword
+    q+=5  #modifing the global variable
+    print(q)
+fun1()
+
+#access and modify the non-local variable
+def outer():
+    x = 10
+    def inner():
+        nonlocal x
+        x = x + 5
+        print("Inner:", x)
+    inner()
+    print("Outer:", x)
+outer()
+
+#lambda function
+s=lambda a,b:a*b
+res=s(5,7)
+print(res)
