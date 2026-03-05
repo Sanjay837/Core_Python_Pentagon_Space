@@ -134,7 +134,7 @@ def outer():
     inner()
 outer()
 
-#closure
+#closure(in nested function calling the inner function outside the outer function or outer function after calling the inner function is called closure)
 def outer():
     print("inside outer")
     def inner():
