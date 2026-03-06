@@ -89,7 +89,13 @@ def outer(ptr):
         print("entering inner")
         res=ptr()
         ans=res.upper()
+        ans1=res.lower()
+        ans2=res.capitalize()
+        ans3=res.title()
         print(ans)
+        print(ans1)
+        print(ans2)
+        print(ans3)
         print("leaving inner")
     return inner
 ref=outer(main)
