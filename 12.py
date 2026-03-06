@@ -78,3 +78,19 @@ def outer(ptr):
     return inner
 ref=outer(main)
 ref()
+
+#WAP convert string upper or lower using decorators only
+def main():
+    str=input("enter the string : ")
+    return str
+def outer(ptr):
+    print("inside outer")
+    def inner():
+        print("entering inner")
+        res=ptr()
+        ans=res.upper()
+        print(ans)
+        print("leaving inner")
+    return inner
+ref=outer(main)
+ref()
