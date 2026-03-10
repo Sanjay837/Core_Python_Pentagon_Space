@@ -1,4 +1,7 @@
-
+#keywords in python(35 keywords iin python)
+import keyword
+print(keyword.kwlist)
+print(f"Number of keywords: {len(keyword.kwlist)}")
 
 class Fan:   #class
     def __init__(self):     #constructor
