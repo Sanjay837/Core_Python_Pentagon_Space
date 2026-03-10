@@ -78,3 +78,63 @@ class ATM:
 atm = ATM(1000)
 atm.deposit(500)
 atm.withdraw(300)
+
+
+#Normal Encapsulation
+class person:
+    def __init__(self):
+        self.__name=""
+    def set_name(self,val): #setter
+        self.__name=val
+    def get_name(self): #getter
+        return self.__name
+p=person()
+p.set_name("loki")
+res=p.get_name()
+print(res)
+print(p.get_name())
+
+
+#Property function in Encapsulation
+class person:
+    def __init__(self):
+        self.__name=""
+    def get_name(self):
+        return self.__name
+    def set_name(self,val):
+        self.__name=val
+    getset=property(get_name,set_name)
+p=person()
+p.getset="Manjunatha"
+res=p.getset
+print(res)
+#Example Property function in Encapsulation
+class dog:
+    def __init__(self):
+        self.__name=""
+    def getter(self):
+        return self.__name
+    def setter(self,val):
+        self.__name=val
+    getset=property(getter,setter)
+
+d=dog()
+d.getset="dagesh bahi"
+res=d.getset
+print(res)
+
+
+#@decorator Property function in Encapsulation
+class person:
+    def __init__(self):
+        self.__name=""
+    @property
+    def dataaccess(self):
+        return self.__name
+    @dataaccess.setter
+    def dataaccess(self,val):
+        self.__name = val
+p=person()
+p.dataaccess="guruji"
+res=p.dataaccess
+print(res)
