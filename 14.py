@@ -1,5 +1,5 @@
-#oops(object oriented programming structure or system)
-#encapsulatioin
+#oops(object-oriented programming structure or system)
+#encapsulatioin(binding or wrapping the data together inside a class and restricting direct access to private class and method)
 class book:
     def __init__(self,page):
         self.__pages=page
