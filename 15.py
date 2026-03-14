@@ -31,7 +31,27 @@ print(z.b)
 print(z.a)
 
 #super() method:
+class Parent:
+    def show(self):
+        print("This is parent method")
+class Child(Parent):
+    def display(self):
+        super().show()
+        print("This is child method")
+c = Child()
+c.display()
+#example for super() with constructor
+class Person:
+    def __init__(self, name):
+        self.name = name
 
+class Student(Person):
+    def __init__(self, name, age):
+        super().__init__(name)
+        self.age = age
+
+s = Student("Sanjay", 21)
+print(s.name, s.age)
 
 #without follow impletementation of inheritance
 class Passengerplane:
