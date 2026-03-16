@@ -60,4 +60,27 @@ c.disp_C()
 c.disp_B()
 c.disp_A()
 
-#hybrid inheritance (combination of different types of inheritance
+#hybrid inheritance (combination of different types of inheritance)
+#  A
+# / \
+#C   B
+# \ /
+#  D
+class A:
+    def methodA(self):
+        print("Class A")
+class B(A):
+    def methodB(self):
+        print("Class B")
+class C(A):
+    def methodC(self):
+        print("Class C")
+class D(B, C):
+    def methodD(self):
+        print("Class D")
+
+obj = D()
+obj.methodA()
+obj.methodB()
+obj.methodC()
+obj.methodD()
