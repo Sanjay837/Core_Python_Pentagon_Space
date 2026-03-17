@@ -52,6 +52,16 @@ class C(B):
 z=C()
 z.dis()
 
+class Animal:
+    def sound(self):
+        print("animal makes different sound")
+class dog(Animal):
+    def sound(self):
+        print("dog makes different sound")
+        Animal.sound(self)
+d=dog()
+d.sound()
+
 #same name but diff number of parameter(python not support overloading)
 class A:
     def dis(self,a,b,c):
