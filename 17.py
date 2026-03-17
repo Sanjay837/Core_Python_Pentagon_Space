@@ -37,6 +37,21 @@ z=Cat()
 z.sound()
 z.sound()
 
+#invoking parent class method during an overriding
+class A:
+    def dis(self):
+        print("inside A")
+class B(A):
+    def dis(self):
+        print("inside B")
+class C(B):
+    def dis(self):
+        print("inside C")
+        B.dis(self)
+        A.dis(self)
+z=C()
+z.dis()
+
 #same name but diff number of parameter(python not support overloading)
 class A:
     def dis(self,a,b,c):
